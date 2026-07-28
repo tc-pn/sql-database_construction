@@ -1,0 +1,12 @@
+name: sql-database-construction
+channels:
+  - defaults
+dependencies:
+  - jupyter
+  - pandas
+  - python=3.13
+  - ipython
+  - pytest
+  - sqlalchemy
+  - psycopg2
+prefix: /home/tczuba/anaconda3/envs/sql-database-construction

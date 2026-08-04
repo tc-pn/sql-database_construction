@@ -9,4 +9,5 @@ dependencies:
   - pytest
   - sqlalchemy
   - psycopg2
-prefix: /home/tczuba/anaconda3/envs/sql-database-construction
+  - psycopg
+  - python-dotenv

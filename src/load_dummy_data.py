@@ -2,7 +2,7 @@
 from data.raw.create_dummy_data import buyers, suppliers, contracts, lots
 
 # load the sql database engine
-from database import engine
+from Connector import engine
 
 """
 Here the data is already taken into a pandas dataframe form

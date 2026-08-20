@@ -13,3 +13,8 @@ class Cleaner(Protocol):
     def __call__(self, *args, **kwds):
         pass
 
+class CleanNumerics:
+    def __init__(self, data : pd.DataFrame):
+        self.data = data
+
+        

@@ -1,5 +1,5 @@
 """
-This module is used to connect to the PostGres SQL database
+This module is used to connect to the postgresql database
 """
 
 import os
@@ -9,6 +9,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from sqlalchemy import create_engine, text
+
+from Context import Context
 
 # en dur
 DATABASE_USER = os.getenv("DATABASE_USER")
@@ -31,8 +33,8 @@ class Connector:
         self.current_user = self._get_current_user()
         self.current_database = self._get_current_database() 
 
-    def __call__(self, data : pd.DataFrame):
-        data.to_sql("data", self.engine, if_exists="replace", index=False)
+    def __call__(self, context : Context):
+        context.data.to_sql("data", self.engine, if_exists="replace", index=False)
     
     def _get_current_user(self):
         with self.engine.connect() as connection:

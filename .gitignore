@@ -1,6 +1,5 @@
 *.csv
 *.env
 *.pyc
-Context*
 Saver*
 *dummy*
